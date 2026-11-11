@@ -11,7 +11,7 @@ import java.util.Map;
 /** Small local static-file server so browser APIs work from http://localhost. */
 public class SiteServer {
     private static final int PORT = 8765;
-    private static final Path ROOT = Path.of(".").toAbsolutePath().normalize();
+    private static final Path ROOT = Path.of("public").toAbsolutePath().normalize();
     private static final Map<String, String> MIME = Map.ofEntries(
         Map.entry(".html", "text/html; charset=utf-8"),
         Map.entry(".css", "text/css; charset=utf-8"),

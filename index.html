@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#111914" />
+  <meta name="description" content="Персональная карта обучения Java: теория, практика, прогресс и подготовка к стажировке." />
+  <title>Java Lab v4.0 — учебное пространство</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">J<span>·</span></div>
+        <div class="brand-copy"><strong>java lab</strong><small>личное учебное пространство</small></div>
+      </div>
+      <div class="sidebar-label">РАБОЧЕЕ ПРОСТРАНСТВО</div>
+      <nav class="nav-list" aria-label="Основная навигация">
+        <button class="nav-item active" data-view="dashboard"><span class="nav-icon">⌂</span><span>Обзор</span></button>
+        <button class="nav-item" data-view="curriculum"><span class="nav-icon">▤</span><span>Карта курса</span><span class="nav-count">72</span></button>
+        <button class="nav-item" data-view="practice"><span class="nav-icon">⌘</span><span>Практика</span></button>
+        <button class="nav-item" data-view="algorithms"><span class="nav-icon">⌁</span><span>Алгоритмы</span></button>
+        <button class="nav-item" data-view="journal"><span class="nav-icon">▧</span><span>Журнал ошибок</span></button>
+        <button class="nav-item" data-view="interview"><span class="nav-icon">◫</span><span>Собеседование</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-progress">
+          <div class="mini-label">ОБЩИЙ ПРОГРЕСС</div>
+          <div class="sidebar-progress-row"><strong id="sidebar-progress-value">6%</strong><span id="sidebar-progress-count">4 / 72 урока</span></div>
+          <div class="progress-track"><div id="sidebar-progress-bar" class="progress-fill" style="width:5.56%"></div></div>
+        </div>
+        <div class="profile-chip">
+          <div class="avatar">J</div>
+          <div><strong>Мой профиль</strong><small>Локальный режим</small></div>
+          <span class="online-dot"></span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobile-menu" aria-label="Открыть меню">☰</button>
+        <div class="breadcrumbs"><span>Java Lab</span><i>/</i><strong id="breadcrumb-current">Обзор</strong></div>
+        <div class="topbar-actions">
+          <div class="save-state" id="cloud-save-state"><span class="save-dot"></span><span>Локальное сохранение</span></div>
+          <button class="btn btn-light" id="account-open" type="button">Войти</button>
+          <button class="icon-button" id="import-data" title="Восстановить резервную копию" aria-label="Импорт данных">⇧</button><button class="icon-button" id="export-data" title="Скачать резервную копию" aria-label="Экспорт данных">⇩</button>
+        </div>
+      </header>
+
+      <div class="page-wrap">
+        <div id="page-content"></div>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modal-backdrop" aria-hidden="true">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-topline"><span class="eyebrow" id="modal-eyebrow">УРОК</span><button class="icon-button modal-close" id="modal-close" aria-label="Закрыть">×</button></div>
+      <div id="modal-content"></div>
+    </section>
+  </div>
+
+  <input type="file" id="import-file" accept="application/json" hidden />
+  <script src="app.js"></script>
+  <script src="v32.js"></script>
+  <script src="account.js"></script>
+</body>
+</html>

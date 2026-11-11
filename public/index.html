@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#111914" />
   <meta name="description" content="Персональная карта обучения Java: теория, практика, прогресс и подготовка к стажировке." />
-  <title>Java Lab v3.2 — учебное пространство</title>
+  <title>Java Lab v4.0 — учебное пространство</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -43,7 +43,8 @@
         <button class="mobile-menu" id="mobile-menu" aria-label="Открыть меню">☰</button>
         <div class="breadcrumbs"><span>Java Lab</span><i>/</i><strong id="breadcrumb-current">Обзор</strong></div>
         <div class="topbar-actions">
-          <div class="save-state"><span class="save-dot"></span><span>Сохраняется на этом устройстве</span></div>
+          <div class="save-state" id="cloud-save-state"><span class="save-dot"></span><span>Локальное сохранение</span></div>
+          <button class="btn btn-light" id="account-open" type="button">Войти</button>
           <button class="icon-button" id="import-data" title="Восстановить резервную копию" aria-label="Импорт данных">⇧</button><button class="icon-button" id="export-data" title="Скачать резервную копию" aria-label="Экспорт данных">⇩</button>
         </div>
       </header>
@@ -64,5 +65,6 @@
   <input type="file" id="import-file" accept="application/json" hidden />
   <script src="app.js"></script>
   <script src="v32.js"></script>
+  <script src="account.js"></script>
 </body>
 </html>
